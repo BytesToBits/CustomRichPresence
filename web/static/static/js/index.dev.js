@@ -1,6 +1,6 @@
 "use strict";
 
-var debug = true;
+var debug = false;
 var elements = {
   load: document.getElementById("load"),
   content: document.getElementById("content")

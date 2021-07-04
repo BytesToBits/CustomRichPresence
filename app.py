@@ -8,7 +8,7 @@ def close(a, b):
 
 eel.init("web")
 
-debug = True
+debug = False
 
 eel.start("templates/index.html", block=False, close_callback=close)
 
