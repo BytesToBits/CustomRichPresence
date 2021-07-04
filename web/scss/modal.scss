@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#modal {
+    opacity: 0%;
+    display: none;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.534);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    transition: opacity .5s ease;
+
+    .box {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-align: left;
+
+        max-width: 400px;
+
+        hr {
+            max-width: 70%;
+            margin-bottom: 5px;
+        }
+
+        button {
+            display: flex;
+
+            margin-left: auto;
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 5px 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(96, 96, 247);
+            cursor: pointer;
+        }
+
+        transition: top .5s ease;
+    }
+}

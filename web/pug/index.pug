@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        link(rel="shortcut icon", href="/static/CustomRichPresence.ico", type="image/x-icon")
+
+        link(rel="stylesheet", href="/static/styles/modal.css")
+        link(rel="stylesheet", href="/static/styles/loading.css")
+        link(rel="stylesheet", href="/static/styles/popup.css")
+        link(rel="stylesheet", href="/static/styles/index.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous")
+        title Custom Rich Presence
+
+    body
+        #modal
+            .box#modalBox
+                h3#modalHeader
+                hr
+                p#modalDesc
+
+                button(role="modalClose") Got it!
+
+
+        #load
+            .loading.preloader
+                .slice
+                .slice
+                .slice
+                .slice
+                .slice
+                .slice
+
+        #content 
+            h1#header Custom Rich Presence
+
+            .selector
+                p Client ID <i class="fas fa-question-circle" modal="clientMod"></i>
+                hr
+                input#client(type="text")
+
+            .row 
+                .selector 
+                    p State <i class="fas fa-question-circle" modal="stateMod"></i>
+                    hr
+                    input#state(type="text")
+                .selector
+                    p Details <i class="fas fa-question-circle" modal="detailsMod"></i>
+                    hr
+                    input#details(type="text")
+            
+            .row 
+                .selector 
+                    p Large Image <i class="fas fa-question-circle" modal="largeImgMod"></i>
+                    hr
+                    input#largeImgName(type="text", placeholder="Name")
+                    input#largeImgTooltip(type="text", placeholder="Tooltip")
+                .selector 
+                    p Small Image <i class="fas fa-question-circle" modal="smallImgMod"></i>
+                    hr
+                    input#smallImgName(type="text", placeholder="Name")
+                    input#smallImgTooltip(type="text", placeholder="Tooltip")
+
+            .selector
+                p Button <i class="fas fa-question-circle" modal="buttonMod"></i>
+                hr
+                input#buttonLabel(type="text", placeholder="Label")
+                input#buttonLink(type="text", placeholder="Link")
+
+            button#run Set Presence
+
+            #popup 
+                p#popupTitle
+                hr
+                p#popupDesc
+
+        script(src="/eel.js")
+        script(src="/static/js/index.js")
+        script(src="/static/js/modal.js")
+        script(src="/static/js/cache.js")

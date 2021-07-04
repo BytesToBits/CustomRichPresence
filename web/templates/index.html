@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/CustomRichPresence.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/modal.css">
+    <link rel="stylesheet" href="/static/styles/loading.css">
+    <link rel="stylesheet" href="/static/styles/popup.css">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Custom Rich Presence</title>
+  </head>
+  <body>
+    <div id="modal">
+      <div class="box" id="modalBox">
+        <h3 id="modalHeader"></h3>
+        <hr>
+        <p id="modalDesc"></p>
+        <button role="modalClose">Got it!</button>
+      </div>
+    </div>
+    <div id="load">
+      <div class="loading preloader">
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+      </div>
+    </div>
+    <div id="content"> 
+      <h1 id="header">Custom Rich Presence</h1>
+      <div class="selector">
+        <p>Client ID <i class="fas fa-question-circle" modal="clientMod"></i></p>
+        <hr>
+        <input id="client" type="text">
+      </div>
+      <div class="row"> 
+        <div class="selector"> 
+          <p>State <i class="fas fa-question-circle" modal="stateMod"></i></p>
+          <hr>
+          <input id="state" type="text">
+        </div>
+        <div class="selector">
+          <p>Details <i class="fas fa-question-circle" modal="detailsMod"></i></p>
+          <hr>
+          <input id="details" type="text">
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="selector"> 
+          <p>Large Image <i class="fas fa-question-circle" modal="largeImgMod"></i></p>
+          <hr>
+          <input id="largeImgName" type="text" placeholder="Name">
+          <input id="largeImgTooltip" type="text" placeholder="Tooltip">
+        </div>
+        <div class="selector"> 
+          <p>Small Image <i class="fas fa-question-circle" modal="smallImgMod"></i></p>
+          <hr>
+          <input id="smallImgName" type="text" placeholder="Name">
+          <input id="smallImgTooltip" type="text" placeholder="Tooltip">
+        </div>
+      </div>
+      <div class="selector">
+        <p>Button <i class="fas fa-question-circle" modal="buttonMod"></i></p>
+        <hr>
+        <input id="buttonLabel" type="text" placeholder="Label">
+        <input id="buttonLink" type="text" placeholder="Link">
+      </div>
+      <button id="run">Set Presence</button>
+      <div id="popup"> 
+        <p id="popupTitle"></p>
+        <hr>
+        <p id="popupDesc"></p>
+      </div>
+    </div>
+    <script src="/eel.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/modal.js"></script>
+    <script src="/static/js/cache.js"></script>
+  </body>
+</html>

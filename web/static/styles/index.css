@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #333333;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+i {
+  cursor: pointer;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#content #header {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px 0px;
+  border-bottom: 1px solid #585858;
+  animation: expand 0.7s ease forwards;
+}
+#content .selector {
+  background-color: white;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  width: 400px;
+}
+#content .selector p {
+  font-size: 14px;
+  color: gray;
+}
+#content .selector p ~ hr {
+  max-width: 100px;
+  margin-top: 2px;
+}
+#content .selector input {
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 5px;
+  outline: none;
+  border: 1px solid limegreen;
+  padding: 5px 10px;
+  width: 95%;
+}
+#content #run {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: #6868f1;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#content #run:hover {
+  background-color: #3e3eb4;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes expand {
+  to {
+    padding: 5px 30px;
+  }
+}

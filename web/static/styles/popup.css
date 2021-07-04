@@ -1,0 +1,15 @@
+#popup {
+  position: absolute;
+  bottom: 20px;
+  right: -50%;
+  color: white;
+  background-color: tomato;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 350px;
+  transition: right 0.4s ease-in-out;
+}
+#popup #popupTitle {
+  font-size: 18px;
+}
