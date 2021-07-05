@@ -41,8 +41,11 @@ if (!debug) {
 function setPresence(oldHTML) {
 
     let _info = {};
+    inputFields.state.value = inputFields.state.innerText
+    inputFields.details.value = inputFields.details.innerText
     for (let element in inputFields) {
-        _info[element] = inputFields[element].value
+        if (element != "state" || element != "details")
+            _info[element] = inputFields[element].value
     }
 
     eel.setPresence(_info)((success) => {

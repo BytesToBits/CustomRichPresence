@@ -1,6 +1,7 @@
 "use strict";
 
 window.addEventListener('load', function (e) {
+  if (debug) return;
   eel.readCache()(function (cache) {
     if (cache.client) {
       inputFields.client.value = cache.client;
@@ -30,7 +31,7 @@ window.addEventListener('load', function (e) {
       inputFields.smallImgTooltip.value = cache.small_text;
     }
 
-    if (cache.buttons[0]) {
+    if (cache.buttons) {
       var button = cache.buttons[0];
 
       if (button.label) {

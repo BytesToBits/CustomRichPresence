@@ -63,8 +63,9 @@ def setPresence(_info):
         
         RPC.update(**update)
 
-        Cache().updateData(**update)
-        Cache().updateData(client=_info['client'])
+        if not debug:
+            Cache().updateData(**update)
+            Cache().updateData(client=_info['client'])
 
         return "true"
     

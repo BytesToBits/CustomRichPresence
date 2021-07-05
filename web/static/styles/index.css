@@ -44,6 +44,7 @@ i {
   margin: 10px 5px;
   border-radius: 5px;
   width: 400px;
+  height: max-content;
 }
 #content .selector p {
   font-size: 14px;
@@ -53,7 +54,7 @@ i {
   max-width: 100px;
   margin-top: 2px;
 }
-#content .selector input {
+#content .selector input, #content .selector span[contenteditable] {
   font-size: 16px;
   border-radius: 5px;
   margin-top: 5px;
@@ -61,6 +62,10 @@ i {
   border: 1px solid limegreen;
   padding: 5px 10px;
   width: 95%;
+}
+#content .selector span[contenteditable] {
+  display: flex;
+  word-break: break-all;
 }
 #content #run {
   margin-top: 10px;

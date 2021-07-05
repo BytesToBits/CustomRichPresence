@@ -1,4 +1,5 @@
 window.addEventListener('load', (e) => {
+    if (debug) return
     eel.readCache()((cache) => {
         if (cache.client) {
             inputFields.client.value = cache.client
@@ -28,7 +29,7 @@ window.addEventListener('load', (e) => {
             inputFields.smallImgTooltip.value = cache.small_text
         }
     
-        if (cache.buttons[0]) {
+        if (cache.buttons) {
             let button = cache.buttons[0]
             if (button.label) {
                 inputFields.buttonLabel.value = button.label
