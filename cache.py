@@ -1,16 +1,23 @@
 import json
 
+
 class Cache:
-    def __init__(self):
-        pass
+    def __init__(self, path="cache.json"):
+        self.path = path
 
     def getData(self):
-        with open("cache.json", "r") as f:
-            return json.load(f)
-        
-    def updateData(self,**newData):
+        return json.load(open(self.path, "r", encoding="utf-8"))
+
+    def saveData(self, data: dict):
+        return json.dump(data, fp=open(self.path, "w"), indent=4)
+
+    def updateData(self, overwrite=True, **kwargs):
         cache = self.getData()
-        for data in newData:
-            cache[data] = newData[data]
-        with open("cache.json", "w+") as f:
-            json.dump(cache, f, indent=4)
+
+        for k, v in kwargs.items():
+            if k in cache.keys() and overwrite is False:
+                continue
+            
+            cache[k] = v
+
+        self.saveData(cache)
